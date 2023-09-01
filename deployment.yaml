@@ -18,7 +18,7 @@ spec:
       - name: node-app
         image: nodeappciupe.azurecr.io/node-app-image:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
 ---       
 apiVersion: v1
 kind: Service
@@ -30,5 +30,5 @@ spec:
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: 8080
+      targetPort: 3000
   type: LoadBalancer
